@@ -16,7 +16,7 @@ public class DaggerApplication extends Application {
         // Don't forget to make 'Rebuild Project' before you call Dagger%your component's name%
         // We want the component to be available from the very beginning of our app so we do the
         // instantiation here.
-
+        component = DaggerLoginComponent.builder().build();
     }
 
     public LoginComponent getComponent() {
