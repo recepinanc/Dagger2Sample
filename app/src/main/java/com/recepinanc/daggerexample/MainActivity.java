@@ -2,6 +2,7 @@ package com.recepinanc.daggerexample;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -31,6 +32,15 @@ public class MainActivity extends AppCompatActivity {
         // Allow to injection
         ((DaggerApplication) getApplication()).getComponent().inject(this);
 
+        loginBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setUsernameText();
+            }
+        });
+    }
+
+    private void setUsernameText() {
         // If user has a valid name than it will write it to the text field.
         if (networkApi.login(user)) {
             usernameET.setText(user.getUsername());
