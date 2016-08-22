@@ -14,5 +14,4 @@ public class UserModule {
     User provideUser() {
         return new User("recepinanc");
     }
-
 }
