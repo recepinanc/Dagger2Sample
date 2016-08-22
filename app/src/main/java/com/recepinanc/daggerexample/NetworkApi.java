@@ -10,11 +10,11 @@ public class NetworkApi {
     /**
      * Validates the username's existence
      *
-     * @param username is a string entered by the user
-     * @return its validity
+     * @param user
+     * @return user's name's validity
      */
-    public boolean login(String username) {
-        return (username != null && username.length() > 0);
+    public boolean login(User user) {
+        return (user.getUsername() != null && user.getUsername().length() > 0);
     }
 
 }
