@@ -25,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        usernameET = (EditText) findViewById(R.id.username);
+        loginBTN = (Button) findViewById(R.id.login);
+
         // Allow to injection
         ((DaggerApplication) getApplication()).getComponent().inject(this);
 
