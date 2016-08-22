@@ -1,5 +1,7 @@
 package com.recepinanc.daggerexample;
 
+import javax.inject.Inject;
+
 /**
  * Basic User model with only a name
  * <p/>
@@ -9,6 +11,7 @@ public class User {
 
     private String username;
 
+    @Inject
     public User(String username) {
         this.username = username;
     }
